@@ -1,36 +1,48 @@
 CREATE TABLE pagos(
-    
+    idPago INT UNIQUE NOT NULL AUTO_INCREMENT PRIMARY KEY,
+   
 );
 CREATE TABLE pedido(
+    idPedido INT UNIQUE NOT NULL AUTO_INCREMENT PRIMARY KEY,
    
 );
 CREATE TABLE correrosClientes(
-   
+    idCorreoCliente INT UNIQUE NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    
 );
 CREATE TABLE telefonosProveedores(
+    idTelefonoProveedor INT UNIQUE NOT NULL AUTO_INCREMENT PRIMARY KEY,
     
 );
 CREATE TABLE factura(
-    
+    idFactura INT UNIQUE NOT NULL AUTO_INCREMENT PRIMARY KEY,
+   
 );
 CREATE TABLE correosProveedor(
-    
+    idCorreoProveedor INT UNIQUE NOT NULL AUTO_INCREMENT PRIMARY KEY,
+   
 );
 CREATE TABLE clientes(
+    idCliente INT UNIQUE NOT NULL AUTO_INCREMENT PRIMARY KEY,
     
 );
 CREATE TABLE articulosFactura(
+    idArticulo INT UNIQUE NOT NULL AUTO_INCREMENT PRIMARY KEY,
    
 );
 CREATE TABLE productos(
+    idProductos INT UNIQUE NOT NULL AUTO_INCREMENT PRIMARY KEY,
    
 );
 CREATE TABLE PedidiosPendientes(
-    
-);
-CREATE TABLE proveedor(
+    idPedidoPendiente INT UNIQUE NOT NULL AUTO_INCREMENT PRIMARY KEY,
    
 );
-CREATE TABLE telefonosClientes(
+CREATE TABLE proveedor(
+    idProveedor INT UNIQUE NOT NULL AUTO_INCREMENT PRIMARY KEY,
     
+);
+CREATE TABLE telefonosClientes(
+    idTelefonoCliente INT UNIQUE NOT NULL AUTO_INCREMENT PRIMARY KEY,
+   
 );
