@@ -1,19 +1,19 @@
 CREATE TABLE
     infoPago (
         idInfoPago INT UNIQUE NOT NULL PRIMARY KEY,
-       
+        
     );
 
 CREATE TABLE
     almacenes (
         codigo INT UNIQUE NOT NULL PRIMARY KEY,
-       
+        
     );
 
 CREATE TABLE
     facturacion (
         idFactrura INT UNIQUE NOT NULL PRIMARY KEY,
-        
+       
     );
 
 CREATE TABLE
@@ -24,7 +24,7 @@ CREATE TABLE
 CREATE TABLE
     libros (
         ISBN INT UNIQUE NOT NULL PRIMARY KEY,
-        
+       
     );
 
 CREATE TABLE
@@ -66,5 +66,17 @@ CREATE TABLE
 CREATE TABLE
     notificacionCorreo (
         idNotificacion INT UNIQUE NOT NULL PRIMARY KEY,
-        
+       
     );
+
+CREATE TABLE telefonosclientes (
+    idTelefonoCliente INT UNIQUE NOT NULL PRIMARY KEY,
+);
+
+CREATE TABLE correosClientes (
+    idCorreosClientes INT UNIQUE NOT NULL PRIMARY KEY,
+);
+
+CREATE TABLE telefonosEditorial (
+    idTelefonosEditorial INT UNIQUE NOT NULL PRIMARY KEY,
+);
