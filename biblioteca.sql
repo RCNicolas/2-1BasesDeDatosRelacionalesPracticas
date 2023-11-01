@@ -122,13 +122,13 @@ ALTER TABLE
 ALTER TABLE
     carritos ADD CONSTRAINT carritos_idcliente_foreign FOREIGN KEY(idCliente) REFERENCES clientes(idCliente);
 ALTER TABLE
-    clientes ADD CONSTRAINT clientes_idcorreo_foreign FOREIGN KEY(idCorreo) REFERENCES correosClientes(idCorreo);
+    clientes ADD CONSTRAINT clientes_idcorreo_foreign FOREIGN KEY(idCorreoElectronico) REFERENCES correosClientes(idCorreosClientes);
 ALTER TABLE
     libros ADD CONSTRAINT libros_ideditorial_foreign FOREIGN KEY(idEditorial) REFERENCES editorial(idEditorial);
 ALTER TABLE
     clientes ADD CONSTRAINT clientes_idtelefono_foreign FOREIGN KEY(idTelefono) REFERENCES telefonosClientes(idTelefonoClientes);
 ALTER TABLE
-    editorial ADD CONSTRAINT editorial_idtelefono_foreign FOREIGN KEY(idTelefono) REFERENCES telefonosEditorial(idTelefonoEditorial);
+    editorial ADD CONSTRAINT editorial_idtelefono_foreign FOREIGN KEY(idTelefono) REFERENCES telefonosEditorial(idTelefonosEditorial);
 ALTER TABLE
     pedidos ADD CONSTRAINT pedidos_idfacturacion_foreign FOREIGN KEY(idFacturacion) REFERENCES facturacion(idFactrura);
 ALTER TABLE
