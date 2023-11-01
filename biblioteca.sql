@@ -108,3 +108,32 @@ CREATE TABLE telefonosEditorial (
     idTelefonosEditorial INT UNIQUE NOT NULL PRIMARY KEY,
     telefonoEditorial CHAR(20) NOT NULL
 );
+
+ALTER TABLE
+    notificacionCorreo ADD CONSTRAINT notificacioncorreo_idcliente_foreign FOREIGN KEY(idCliente) REFERENCES clientes(idCliente);
+ALTER TABLE
+    facturacion ADD CONSTRAINT facturacion_idcliente_foreign FOREIGN KEY(idCliente) REFERENCES clientes(idCliente);
+ALTER TABLE
+    stock ADD CONSTRAINT stock_codigoalmacen_foreign FOREIGN KEY(codigoAlmacen) REFERENCES almacenes(codigo);
+ALTER TABLE
+    carritos ADD CONSTRAINT carritos_isbn_foreign FOREIGN KEY(ISBN) REFERENCES libros(ISBN);
+ALTER TABLE
+    stock ADD CONSTRAINT stock_isbn_foreign FOREIGN KEY(ISBN) REFERENCES libros(ISBN);
+ALTER TABLE
+    carritos ADD CONSTRAINT carritos_idcliente_foreign FOREIGN KEY(idCliente) REFERENCES clientes(idCliente);
+ALTER TABLE
+    clientes ADD CONSTRAINT clientes_idcorreo_foreign FOREIGN KEY(idCorreo) REFERENCES correosClientes(idCorreo);
+ALTER TABLE
+    libros ADD CONSTRAINT libros_ideditorial_foreign FOREIGN KEY(idEditorial) REFERENCES editorial(idEditorial);
+ALTER TABLE
+    clientes ADD CONSTRAINT clientes_idtelefono_foreign FOREIGN KEY(idTelefono) REFERENCES telefonosClientes(idTelefonoClientes);
+ALTER TABLE
+    editorial ADD CONSTRAINT editorial_idtelefono_foreign FOREIGN KEY(idTelefono) REFERENCES telefonosEditorial(idTelefonoEditorial);
+ALTER TABLE
+    pedidos ADD CONSTRAINT pedidos_idfacturacion_foreign FOREIGN KEY(idFacturacion) REFERENCES facturacion(idFactrura);
+ALTER TABLE
+    pedidos ADD CONSTRAINT pedidos_idinfopago_foreign FOREIGN KEY(idInfoPago) REFERENCES infoPago(idInfoPago);
+ALTER TABLE
+    autoresLibros ADD CONSTRAINT autoreslibros_idlibros_foreign FOREIGN KEY(idLibros) REFERENCES autores(idAutor);
+ALTER TABLE
+    autoresLibros ADD CONSTRAINT autoreslibros_idautores_foreign FOREIGN KEY(idAutores) REFERENCES libros(idAutorLibros);
