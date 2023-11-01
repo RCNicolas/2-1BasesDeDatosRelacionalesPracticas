@@ -72,3 +72,27 @@ CREATE TABLE telefonosClientes(
     idTelefonoCliente INT UNIQUE NOT NULL AUTO_INCREMENT PRIMARY KEY,
     telefono CHAR(20) NOT NULL
 );
+
+
+ALTER TABLE
+    pedido ADD CONSTRAINT pedido_idfactura_foreign FOREIGN KEY(idFactura) REFERENCES factura(idFactura);
+ALTER TABLE
+    clientes ADD CONSTRAINT clientes_idtelefono_foreign FOREIGN KEY(idTelefono) REFERENCES telefonosClientes(idTelefonoCliente);
+ALTER TABLE
+    factura ADD CONSTRAINT factura_idcliente_foreign FOREIGN KEY(idCliente) REFERENCES clientes(idCliente);
+ALTER TABLE
+    productos ADD CONSTRAINT productos_idproveedorpreferido_foreign FOREIGN KEY(idProveedorPreferido) REFERENCES proveedor(idProveedor);
+ALTER TABLE
+    clientes ADD CONSTRAINT clientes_idcorreo_foreign FOREIGN KEY(idCorreo) REFERENCES correrosClientes(idCorreoCliente);
+ALTER TABLE
+    proveedor ADD CONSTRAINT proveedor_idtelefono_foreign FOREIGN KEY(idTelefono) REFERENCES telefonosProveedores(idTelefonoProveedor);
+ALTER TABLE
+    factura ADD CONSTRAINT factura_idarticulosfactura_foreign FOREIGN KEY(idArticulosFactura) REFERENCES articulosFactura(idArticulo);
+ALTER TABLE
+    pagos ADD CONSTRAINT pagos_idfactura_foreign FOREIGN KEY(idFactura) REFERENCES factura(idFactura);
+ALTER TABLE
+    PedidiosPendientes ADD CONSTRAINT pedidiospendientes_idpedido_foreign FOREIGN KEY(idPedido) REFERENCES pedido(idPedido);
+ALTER TABLE
+    pedido ADD CONSTRAINT pedido_idproducto_foreign FOREIGN KEY(idProducto) REFERENCES productos(idProductos);
+ALTER TABLE
+    proveedor ADD CONSTRAINT proveedor_idcorreo_foreign FOREIGN KEY(idcorreo) REFERENCES correosProveedor(idCorreoProveedor);
